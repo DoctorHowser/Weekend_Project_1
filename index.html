@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div id="submission">
+		<form id="employeeInfo">
+			<label for='employeeFirst'>First Name:</label>
+			<input type='text' id='employeeFirst' name='employeeFirst' placeholder="John"/>
+			<label for='employeeLast'>Last Name:</label>
+			<input type='text' id='employeeLast' name='employeeLast' placeholder="Doe"/>
+			<label for='employeeNumber'>Employee Number:</label>
+			<input type='text' id='employeeNumber' name='employeeNumber' placeholder="123456"/>
+			<label for='employeeTitle'>Employee Title:</label>
+			<input type='text' id='employeeTitle' name='employeeTitle' placeholder="Developer"/>
+			<label for='employeeSalary'>Employee Salary:</label>
+			<input type='text' id='employeeSalary' name='employeeSalary' placeholder="123456"/>
+			<input type='submit' value='Submit Employee'/>
+		</form>
+	</div>	
+
+	<div id="employeeContainer">
+		<h1>Last Submission</h1>
+	</div>	
+	<div id="salaryContainer">	
+		<h1>Total Monthly Salarly Payout:</h1>
+		<h2 id="lastSubmit"></h2>
+	</div>
+
+</body>
+</html>

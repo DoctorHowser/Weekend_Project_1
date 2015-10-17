@@ -35,6 +35,9 @@ $(document).ready(function(){
 		addInfo(values);
 		addSalary(monthlySalaries);
 	});
+	$("#employeeContainer").on('click', 'button', function() {
+		$(this).closest('tr').remove();
+	});
 });
 
 function addInfo(employee){

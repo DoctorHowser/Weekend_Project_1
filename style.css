@@ -1,12 +1,33 @@
 h1,h2, p {
 	text-align: center;
 }
-#submission, #salaryContainer, #employeeContainer {
+#submission, #employeeContainer {
 	float: left;
 	border: 1px solid black;
-	width: 160px;
+	width: 400px;
 	height: 250px;
-	margin: 0 auto 0 auto;
+	margin: 0 2px 2px auto;
+	padding: 5px 5px 5px 5px;
+}
+#employeeContainer {
+	width: 800px;
+	height: auto;
+}
+#salaryContainer {
+	clear: both;
+	border: 1px solid black;
+	width: 400px;
+	height: auto;
+	margin: 2px auto 0 0;
+	padding: 5px 5px 5px 5px;
+}
+th{
+	border: solid 1px black;
+}
+
+td {
+	border-bottom: dashed 1px black;
+	height: 15px;
 	padding: 5px 5px 5px 5px;
 }
 

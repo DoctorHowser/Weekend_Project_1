@@ -39,13 +39,13 @@ $(document).ready(function(){
 });
 
 function addInfo(employee){
-	$("#employeeContainer").append("<div class='employee'></div>");
-	var $el = $("#employeeContainer").children().last();
+	$("#employeeContainer").append("<tr class='employee'></tr>");
+	var $el = $("#employeeContainer").children().find("tr").last();
 
-	$el.append("<p> Name: " + employee.employeeFirst + " " + employee.employeeLast + "</p>");
-	$el.append("<p> Number: " + employee.employeeNumber + "</p>");
-	$el.append("<p> Title: " + employee.employeeTitle + "</p>");
-	$el.append("<p> Salary: " + employee.employeeSalary + "</p>");
+	$el.append("<td>" + employee.employeeFirst + " " + employee.employeeLast + "</td>");
+	$el.append("<td>" + employee.employeeNumber + "</td>");
+	$el.append("<td>" + employee.employeeTitle + "</td>");
+	$el.append("<td>" + employee.employeeSalary + "</td>");
 }
 function addSalary(dollar){
 		$("#lastSubmit").text(dollar + " dollars per month");

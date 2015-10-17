@@ -20,7 +20,7 @@ $(document).ready(function(){
 		//add only most recent salary via click counter for Array index, only if number
 			
 			var numCheck = parseInt(employeeArray[numSubmissions].employeeSalary);
-			console.log(numCheck, salaries);
+	
 
 			if (isNaN(numCheck)) {
 				numCheck = 0;
@@ -28,10 +28,9 @@ $(document).ready(function(){
 
 			salaries += numCheck;
 			//increment clicks for next submission
-			console.log(numCheck, salaries)
 			numSubmissions++;
 			var monthlySalaries = (salaries/12).toFixed(2);
-			console.log(numCheck, salaries, monthlySalaries);
+			
 		
 		addInfo(values);
 		addSalary(monthlySalaries);
@@ -46,6 +45,7 @@ function addInfo(employee){
 	$el.append("<td>" + employee.employeeNumber + "</td>");
 	$el.append("<td>" + employee.employeeTitle + "</td>");
 	$el.append("<td>" + employee.employeeSalary + "</td>");
+	$el.append("<td><button class='delete'>DELETE</button></td>")
 }
 function addSalary(dollar){
 		$("#lastSubmit").text(dollar + " dollars per month");

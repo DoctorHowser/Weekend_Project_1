@@ -16,21 +16,26 @@ h1,h2, p {
 #salaryContainer {
 	clear: both;
 	border: 1px solid black;
-	width: 400px;
+	width: 1200;
 	height: auto;
 	margin: 2px auto 0 0;
 	padding: 5px 5px 5px 5px;
 }
 th{
 	border: solid 1px black;
+	min-width: 100px;
 }
 
 td {
-	border-bottom: dashed 1px black;
+	border: dashed 1px black;
 	height: 15px;
 	padding: 5px 5px 5px 5px;
+	text-align: center;
 }
-
+td button {
+	margin: 0 auto 0 auto;
+	width: 100px;
+}
 
 #employeeInfo label{
 	display: block;

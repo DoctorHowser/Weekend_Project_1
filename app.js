@@ -52,7 +52,8 @@ function addInfo(employee){
 	$el.append("<td>" + employee.employeeFirst + " " + employee.employeeLast + "</td>");
 	$el.append("<td>" + employee.employeeNumber + "</td>");
 	$el.append("<td>" + employee.employeeTitle + "</td>");
-	$el.append("<td class='database' data-salary=" + employee.employeeSalary + ">" + employee.employeeSalary + "</td>");
+	$el.append("<td class='database'>" + employee.employeeSalary + "</td>");
+	$el.find('.database').data('salary', employee.employeeSalary);
 	$el.append("<td><button class='delete'>DELETE</button></td>")
 }
 //Changes text within #lastSubmit for running monthly salary total

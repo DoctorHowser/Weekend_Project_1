@@ -37,6 +37,10 @@ $(document).ready(function(){
 	//Delete button functionality finds data, deletes value from running salary total, appends DOM with new total
 	$("#employeeContainer").on('click', 'button', function() {
 		var removedDollar = $(this).closest('tr').find('.database').data('salary');
+
+		if (isNaN(removedDollar)) {
+				removedDollar = 0;
+			}
 		salaries -= removedDollar;
 		var monthlySalaries = (salaries/12).toFixed(2);
 		totalSalary(monthlySalaries);

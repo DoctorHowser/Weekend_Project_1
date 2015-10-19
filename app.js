@@ -14,7 +14,6 @@ $(document).ready(function(){
 		})
 		
 		$("#employeeInfo").find("input[type=text]").val("");
-		console.log(values);
 		employeeArray.push(values);
 		
 		//add only most recent salary via click counter for Array index, only if number
@@ -33,13 +32,19 @@ $(document).ready(function(){
 			
 		
 		addInfo(values);
-		addSalary(monthlySalaries);
+		totalSalary(monthlySalaries);
 	});
+	//Delete button functionality finds data, deletes value from running salary total, appends DOM with new total
 	$("#employeeContainer").on('click', 'button', function() {
+		var removedDollar = $(this).closest('tr').find('.database').data('salary');
+		salaries -= removedDollar;
+		var monthlySalaries = (salaries/12).toFixed(2);
+		totalSalary(monthlySalaries);
+		//removes table row of info
 		$(this).closest('tr').remove();
-	});
+			});
 });
-
+// Adds info to DOM, updates running total
 function addInfo(employee){
 	$("#employeeContainer").append("<tr class='employee'></tr>");
 	var $el = $("#employeeContainer").children().find("tr").last();
@@ -47,9 +52,10 @@ function addInfo(employee){
 	$el.append("<td>" + employee.employeeFirst + " " + employee.employeeLast + "</td>");
 	$el.append("<td>" + employee.employeeNumber + "</td>");
 	$el.append("<td>" + employee.employeeTitle + "</td>");
-	$el.append("<td>" + employee.employeeSalary + "</td>");
+	$el.append("<td class='database' data-salary=" + employee.employeeSalary + ">" + employee.employeeSalary + "</td>");
 	$el.append("<td><button class='delete'>DELETE</button></td>")
 }
-function addSalary(dollar){
+//Changes text within #lastSubmit for running monthly salary total
+function totalSalary(dollar){
 		$("#lastSubmit").text(dollar + " dollars per month");
 }
